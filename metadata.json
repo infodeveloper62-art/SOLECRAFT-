@@ -1,0 +1,6 @@
+{
+  "name": "SOLECRAFT | Premium Footwear & Sneakers",
+  "description": "Discover SOLECRAFT premium sneakers designed for everyday comfort, confidence, and modern editorial style. Handcrafted materials and high-performance cushioning.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
