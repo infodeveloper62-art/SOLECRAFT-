@@ -14,15 +14,15 @@ import { StoreService } from '../services/store';
   imports: [MatIconModule],
   template: `
     <!-- Top Announcement Bar -->
-    <div class="bg-[#241B14] text-[#E9DFD2] text-xs py-2 px-4 text-center font-medium tracking-wide flex items-center justify-center gap-2">
-      <span>Complimentary Worldwide Delivery on orders over $120</span>
+    <div class="bg-[#241B14] text-[#E9DFD2] text-[11px] sm:text-xs py-1.5 sm:py-2 px-3 sm:px-4 text-center font-medium tracking-wide flex items-center justify-center gap-1.5 sm:gap-2 truncate">
+      <span class="truncate">Complimentary Worldwide Delivery over $120</span>
       <span class="opacity-50">·</span>
       <button
         type="button"
-        class="underline underline-offset-4 cursor-pointer hover:text-white transition-colors"
+        class="underline underline-offset-4 cursor-pointer hover:text-white transition-colors shrink-0 font-semibold"
         (click)="store.openSizeGuide()"
       >
-        View Fit & Sizing Guide
+        Size Guide
       </button>
     </div>
 
@@ -31,21 +31,21 @@ import { StoreService } from '../services/store';
       class="sticky top-0 z-40 transition-all duration-300 w-full"
       [class]="
         isScrolled()
-          ? 'bg-[#F7F3ED]/95 backdrop-blur-md shadow-sm border-b border-[#E5DACF]/80 py-3.5'
-          : 'bg-[#F7F3ED] border-b border-[#E5DACF]/50 py-5'
+          ? 'bg-[#F7F3ED]/95 backdrop-blur-md shadow-sm border-b border-[#E5DACF]/80 py-2.5 sm:py-3.5'
+          : 'bg-[#F7F3ED] border-b border-[#E5DACF]/50 py-3 sm:py-5'
       "
     >
-      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div class="flex items-center justify-between gap-4">
+      <div class="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+        <div class="flex items-center justify-between gap-2 sm:gap-4">
           <!-- Mobile Menu Button (Left on mobile) -->
           <div class="flex items-center lg:hidden">
             <button
               type="button"
               (click)="store.toggleMobileMenu(true)"
-              class="p-2 -ml-2 text-[#241B14] hover:text-[#4B3928] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928]"
+              class="p-1.5 sm:p-2 -ml-1 text-[#241B14] hover:text-[#4B3928] focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928] rounded-lg"
               aria-label="Open navigation menu"
             >
-              <mat-icon>menu</mat-icon>
+              <mat-icon class="text-xl sm:text-2xl">menu</mat-icon>
             </button>
           </div>
 
@@ -56,10 +56,10 @@ import { StoreService } from '../services/store';
               (click)="$event.preventDefault(); onLogoClick()"
               class="group flex flex-col items-start cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928]"
             >
-              <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-[#241B14] group-hover:text-[#4B3928] transition-colors">
+              <span class="font-serif text-xl sm:text-2xl md:text-3xl font-bold tracking-tight text-[#241B14] group-hover:text-[#4B3928] transition-colors">
                 SOLECRAFT
               </span>
-              <span class="text-[9px] tracking-[0.28em] uppercase text-[#806345] font-semibold">
+              <span class="text-[8px] sm:text-[9px] tracking-[0.25em] sm:tracking-[0.28em] uppercase text-[#806345] font-semibold">
                 Footwear Ateliers
               </span>
             </a>
@@ -70,7 +70,7 @@ import { StoreService } from '../services/store';
             <button
               type="button"
               (click)="navigateCategory('Men')"
-              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative"
+              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative cursor-pointer"
               [class]="store.activeCategory() === 'Men' ? 'text-[#241B14] font-semibold border-b-2 border-[#4B3928]' : 'text-[#4B3928]/80'"
             >
               Men
@@ -78,7 +78,7 @@ import { StoreService } from '../services/store';
             <button
               type="button"
               (click)="navigateCategory('Women')"
-              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative"
+              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative cursor-pointer"
               [class]="store.activeCategory() === 'Women' ? 'text-[#241B14] font-semibold border-b-2 border-[#4B3928]' : 'text-[#4B3928]/80'"
             >
               Women
@@ -86,7 +86,7 @@ import { StoreService } from '../services/store';
             <button
               type="button"
               (click)="navigateCategory('Kids')"
-              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative"
+              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative cursor-pointer"
               [class]="store.activeCategory() === 'Kids' ? 'text-[#241B14] font-semibold border-b-2 border-[#4B3928]' : 'text-[#4B3928]/80'"
             >
               Kids
@@ -94,7 +94,7 @@ import { StoreService } from '../services/store';
             <button
               type="button"
               (click)="navigateCategory('Running')"
-              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative"
+              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative cursor-pointer"
               [class]="store.activeCategory() === 'Running' ? 'text-[#241B14] font-semibold border-b-2 border-[#4B3928]' : 'text-[#4B3928]/80'"
             >
               Running
@@ -102,7 +102,7 @@ import { StoreService } from '../services/store';
             <button
               type="button"
               (click)="navigateCategory('New Arrivals')"
-              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative"
+              class="text-sm font-medium transition-colors hover:text-[#4B3928] pb-1 relative cursor-pointer"
               [class]="store.activeCategory() === 'New Arrivals' ? 'text-[#241B14] font-semibold border-b-2 border-[#4B3928]' : 'text-[#4B3928]/80'"
             >
               Collections
@@ -110,47 +110,47 @@ import { StoreService } from '../services/store';
             <button
               type="button"
               (click)="store.openBrandStory()"
-              class="text-sm font-medium transition-colors text-[#4B3928]/80 hover:text-[#4B3928] pb-1"
+              class="text-sm font-medium transition-colors text-[#4B3928]/80 hover:text-[#4B3928] pb-1 cursor-pointer"
             >
               Craftsmanship
             </button>
           </nav>
 
           <!-- Right Actions -->
-          <div class="flex items-center gap-2 sm:gap-4">
+          <div class="flex items-center gap-1 sm:gap-3">
             <!-- Search trigger -->
             <button
               type="button"
               (click)="store.toggleSearch()"
-              class="p-2 text-[#241B14] hover:text-[#4B3928] hover:bg-[#E9DFD2]/40 rounded-full transition-colors relative"
+              class="p-1.5 sm:p-2 text-[#241B14] hover:text-[#4B3928] hover:bg-[#E9DFD2]/40 rounded-full transition-colors relative cursor-pointer"
               aria-label="Search sneakers"
               title="Search products"
             >
-              <mat-icon class="text-xl">search</mat-icon>
+              <mat-icon class="text-lg sm:text-xl">search</mat-icon>
             </button>
 
-            <!-- Account modal / info -->
+            <!-- Account modal / info (Desktop & Tablet) -->
             <button
               type="button"
               (click)="openAccountInfo()"
-              class="inline-flex p-2 text-[#241B14] hover:text-[#4B3928] hover:bg-[#E9DFD2]/40 rounded-full transition-colors relative"
+              class="hidden sm:inline-flex p-1.5 sm:p-2 text-[#241B14] hover:text-[#4B3928] hover:bg-[#E9DFD2]/40 rounded-full transition-colors relative cursor-pointer"
               aria-label="Customer Account"
               title="Member Account"
             >
-              <mat-icon class="text-xl">person_outline</mat-icon>
+              <mat-icon class="text-lg sm:text-xl">person_outline</mat-icon>
             </button>
 
             <!-- Wishlist Heart with count -->
             <button
               type="button"
               (click)="store.openWishlist()"
-              class="p-2 text-[#241B14] hover:text-[#4B3928] hover:bg-[#E9DFD2]/40 rounded-full transition-colors relative"
+              class="p-1.5 sm:p-2 text-[#241B14] hover:text-[#4B3928] hover:bg-[#E9DFD2]/40 rounded-full transition-colors relative cursor-pointer"
               aria-label="Wishlist"
               title="View Wishlist"
             >
-              <mat-icon class="text-xl">favorite_border</mat-icon>
+              <mat-icon class="text-lg sm:text-xl">favorite_border</mat-icon>
               @if (store.wishlistCount() > 0) {
-                <span class="absolute top-1 right-1 bg-[#806345] text-white text-[10px] font-bold w-4 h-4 rounded-full flex items-center justify-center tabular-nums">
+                <span class="absolute top-0.5 right-0.5 sm:top-1 sm:right-1 bg-[#806345] text-white text-[9px] sm:text-[10px] font-bold w-3.5 h-3.5 sm:w-4 sm:h-4 rounded-full flex items-center justify-center tabular-nums">
                   {{ store.wishlistCount() }}
                 </span>
               }

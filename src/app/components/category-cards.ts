@@ -38,7 +38,7 @@ interface CategoryCardItem {
           <button
             type="button"
             (click)="selectCategory(item.categoryFilter)"
-            class="text-left w-full group relative overflow-hidden rounded-2xl cursor-pointer bg-[#241B14] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-end min-h-[260px] sm:min-h-[380px] lg:min-h-[420px] p-5 sm:p-7 lg:p-8"
+            class="text-left w-full group relative overflow-hidden rounded-2xl cursor-pointer bg-[#241B14] shadow-md hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1.5 flex flex-col justify-end min-h-[210px] sm:min-h-[360px] lg:min-h-[420px] p-4 sm:p-7 lg:p-8"
           >
             <!-- Background Image with Hover Zoom -->
             <img
@@ -54,27 +54,27 @@ interface CategoryCardItem {
             <!-- Card Content Over Image -->
             <div class="relative z-10 flex flex-col">
               <!-- Item Count Indicator -->
-              <div class="flex items-center justify-between text-xs text-[#E9DFD2]/80 uppercase tracking-widest font-semibold mb-2">
+              <div class="flex items-center justify-between text-[11px] sm:text-xs text-[#E9DFD2]/80 uppercase tracking-widest font-semibold mb-1.5 sm:mb-2">
                 <span>{{ item.itemCount }}</span>
-                <span class="w-8 h-8 rounded-full bg-white/10 backdrop-blur-xs flex items-center justify-center text-white group-hover:bg-[#806345] group-hover:translate-x-1 transition-all">
-                  <mat-icon class="text-sm">arrow_forward</mat-icon>
+                <span class="w-7 h-7 sm:w-8 sm:h-8 rounded-full bg-white/10 backdrop-blur-xs flex items-center justify-center text-white group-hover:bg-[#806345] group-hover:translate-x-1 transition-all">
+                  <mat-icon class="text-xs sm:text-sm">arrow_forward</mat-icon>
                 </span>
               </div>
 
               <!-- Category Title (Large Bold Serif) -->
-              <h3 class="font-serif text-2xl sm:text-3xl font-bold text-white tracking-wide mb-2 group-hover:text-[#E9DFD2] transition-colors">
+              <h3 class="font-serif text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-wide mb-1 sm:mb-2 group-hover:text-[#E9DFD2] transition-colors">
                 {{ item.title }}
               </h3>
 
               <!-- Category Subtitle -->
-              <p class="text-sm text-[#E9DFD2]/80 font-normal leading-relaxed mb-4">
+              <p class="text-xs sm:text-sm text-[#E9DFD2]/80 font-normal leading-relaxed mb-3 sm:mb-4 line-clamp-2">
                 {{ item.subtitle }}
               </p>
 
               <!-- Clean Link Action -->
-              <div class="inline-flex items-center gap-2 text-xs font-semibold text-white uppercase tracking-wider">
+              <div class="inline-flex items-center gap-2 text-[11px] sm:text-xs font-semibold text-white uppercase tracking-wider">
                 <span>Shop Category</span>
-                <span class="h-0.5 w-6 bg-[#E9DFD2] group-hover:w-10 transition-all duration-300"></span>
+                <span class="h-0.5 w-5 sm:w-6 bg-[#E9DFD2] group-hover:w-8 sm:group-hover:w-10 transition-all duration-300"></span>
               </div>
             </div>
           </button>

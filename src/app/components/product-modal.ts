@@ -25,25 +25,25 @@ import { StoreService } from '../services/store';
         ></button>
 
         <!-- Modal Dialog Container -->
-        <div class="flex min-h-full items-center justify-center p-3 sm:p-4 md:p-6 text-center">
+        <div class="flex min-h-full items-center justify-center p-2 sm:p-4 md:p-6 text-center">
           <div
-            class="relative w-full max-w-4xl transform overflow-hidden rounded-3xl bg-[#F7F3ED] text-left align-middle shadow-2xl transition-all border border-[#E5DACF]"
+            class="relative w-full max-w-4xl transform overflow-hidden rounded-2xl sm:rounded-3xl bg-[#F7F3ED] text-left align-middle shadow-2xl transition-all border border-[#E5DACF]"
           >
             <!-- Close Button Top Right -->
             <button
               type="button"
               (click)="store.closeProductModal()"
-              class="absolute top-4 right-4 z-20 w-10 h-10 rounded-full bg-white/90 hover:bg-white text-[#241B14] shadow-md flex items-center justify-center transition-transform hover:scale-105 cursor-pointer focus:outline-none"
+              class="absolute top-3 right-3 sm:top-4 sm:right-4 z-20 w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-white/90 hover:bg-white text-[#241B14] shadow-md flex items-center justify-center transition-transform hover:scale-105 cursor-pointer focus:outline-none"
               aria-label="Close product view"
             >
-              <mat-icon>close</mat-icon>
+              <mat-icon class="text-base sm:text-lg">close</mat-icon>
             </button>
 
             <!-- 2-Column Product Detail Layout -->
             <div class="grid grid-cols-1 md:grid-cols-12 gap-0">
               
               <!-- Left Column: Gallery & Images (md:col-span-6) -->
-              <div class="md:col-span-6 bg-white p-6 sm:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-[#E5DACF]">
+              <div class="md:col-span-6 bg-white p-4 sm:p-8 flex flex-col justify-between border-b md:border-b-0 md:border-r border-[#E5DACF]">
                 <!-- Main Featured Product Image -->
                 <div class="relative aspect-square w-full rounded-2xl overflow-hidden bg-[#F7F3ED] mb-4">
                   <img
@@ -97,7 +97,7 @@ import { StoreService } from '../services/store';
               </div>
 
               <!-- Right Column: Product Specs & Purchase Module (md:col-span-6) -->
-              <div class="md:col-span-6 p-6 sm:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
+              <div class="md:col-span-6 p-4 sm:p-8 flex flex-col justify-between max-h-[85vh] overflow-y-auto">
                 <div>
                   <!-- Category & Rating Row -->
                   <div class="flex items-center justify-between gap-2 mb-2">
@@ -171,7 +171,7 @@ import { StoreService } from '../services/store';
                         size guide
                       </button>
                     </div>
-                    <div class="grid grid-cols-4 sm:grid-cols-7 gap-2">
+                    <div class="grid grid-cols-4 sm:grid-cols-7 gap-1.5 sm:gap-2">
                       @for (size of availableSizes; track size) {
                         <button
                           type="button"

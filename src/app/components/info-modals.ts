@@ -22,9 +22,9 @@ import { StoreService } from '../services/store';
           class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity w-full h-full cursor-default"
           (click)="store.closeSizeGuide()"
         ></button>
-        <div class="flex min-h-full items-center justify-center p-4">
+        <div class="flex min-h-full items-center justify-center p-2 sm:p-4">
           <div
-            class="relative w-full max-w-2xl bg-[#F7F3ED] rounded-3xl p-6 sm:p-8 shadow-2xl border border-[#E5DACF] text-left"
+            class="relative w-full max-w-2xl bg-[#F7F3ED] rounded-2xl sm:rounded-3xl p-4 sm:p-8 shadow-2xl border border-[#E5DACF] text-left"
           >
             <div class="flex items-center justify-between pb-4 border-b border-[#E5DACF] mb-6">
               <div>
@@ -125,9 +125,9 @@ import { StoreService } from '../services/store';
           class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity w-full h-full cursor-default"
           (click)="store.closeBrandStory()"
         ></button>
-        <div class="flex min-h-full items-center justify-center p-4">
+        <div class="flex min-h-full items-center justify-center p-2 sm:p-4">
           <div
-            class="relative w-full max-w-3xl bg-[#F7F3ED] rounded-3xl p-6 sm:p-10 shadow-2xl border border-[#E5DACF] text-left"
+            class="relative w-full max-w-3xl bg-[#F7F3ED] rounded-2xl sm:rounded-3xl p-4 sm:p-10 shadow-2xl border border-[#E5DACF] text-left"
           >
             <button
               type="button"

@@ -69,7 +69,7 @@ import { StoreService } from '../services/store';
               <button
                 type="button"
                 (click)="store.openBrandStory()"
-                class="px-8 py-3.5 bg-[#4B3928] hover:bg-[#382B1E] text-white text-xs sm:text-sm font-semibold tracking-wider rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-sm inline-flex items-center gap-2 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928]"
+                class="w-full sm:w-auto justify-center px-8 py-3.5 bg-[#4B3928] hover:bg-[#382B1E] text-white text-xs sm:text-sm font-semibold tracking-wider rounded-xl transition-all duration-200 transform hover:-translate-y-0.5 shadow-sm inline-flex items-center gap-2 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928]"
               >
                 <span>LEARN MORE</span>
                 <mat-icon class="text-base">arrow_forward</mat-icon>

@@ -19,11 +19,11 @@ import { StoreService } from '../services/store';
         ></button>
 
         <!-- Slide-over drawer -->
-        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
           <div class="w-screen max-w-md bg-[#F7F3ED] shadow-2xl flex flex-col justify-between border-l border-[#E5DACF]">
             
             <!-- Header -->
-            <div class="p-6 border-b border-[#E5DACF] flex items-center justify-between bg-white">
+            <div class="p-4 sm:p-6 border-b border-[#E5DACF] flex items-center justify-between bg-white">
               <div class="flex items-center gap-2">
                 <mat-icon class="text-red-500">favorite</mat-icon>
                 <h2 class="font-serif text-xl font-bold text-[#241B14]">
@@ -44,7 +44,7 @@ import { StoreService } from '../services/store';
             </div>
 
             <!-- Wishlist Items List -->
-            <div class="flex-1 overflow-y-auto p-6 divide-y divide-[#E5DACF]/70">
+            <div class="flex-1 overflow-y-auto p-4 sm:p-6 divide-y divide-[#E5DACF]/70">
               @if (store.wishlistProducts().length > 0) {
                 @for (prod of store.wishlistProducts(); track prod.id) {
                   <div class="py-4 first:pt-0 last:pb-0 flex gap-4 items-center">
@@ -129,7 +129,7 @@ import { StoreService } from '../services/store';
 
             <!-- Footer with clear actions -->
             @if (store.wishlistProducts().length > 0) {
-              <div class="p-6 bg-white border-t border-[#E5DACF] flex flex-col gap-2">
+              <div class="p-4 sm:p-6 bg-white border-t border-[#E5DACF] flex flex-col gap-2">
                 <button
                   type="button"
                   (click)="addAllToBag()"

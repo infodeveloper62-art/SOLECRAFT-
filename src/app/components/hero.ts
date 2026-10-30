@@ -31,62 +31,62 @@ interface HeroSlide {
         <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-[#E9DFD2]/10 blur-3xl pointer-events-none"></div>
 
         <!-- Main Content Area: Split 2-Column on Desktop, Stacked on Mobile -->
-        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-6 items-center p-6 sm:p-10 md:p-14 lg:p-16 flex-1">
+        <div class="relative z-10 grid grid-cols-1 lg:grid-cols-12 gap-6 sm:gap-8 lg:gap-6 items-center p-5 sm:p-10 md:p-14 lg:p-16 flex-1">
           
           <!-- Left Column: Typography & CTAs -->
           <div class="lg:col-span-7 flex flex-col justify-center max-w-2xl">
             <!-- Seasonal Sub-badge -->
-            <div class="inline-flex items-center gap-2 mb-4">
+            <div class="inline-flex items-center gap-2 mb-3 sm:mb-4">
               <span class="h-1.5 w-1.5 rounded-full bg-[#E9DFD2]"></span>
-              <span class="text-xs sm:text-sm font-semibold tracking-widest uppercase text-[#E9DFD2]/90">
+              <span class="text-[11px] sm:text-sm font-semibold tracking-widest uppercase text-[#E9DFD2]/90">
                 {{ currentSlide().tag }}
               </span>
               <span class="text-xs text-[#E9DFD2]/50">·</span>
-              <span class="text-xs text-[#E9DFD2]/80 font-medium">Autumn/Winter Edition</span>
+              <span class="text-[11px] sm:text-xs text-[#E9DFD2]/80 font-medium">Autumn/Winter</span>
             </div>
 
             <!-- Main Heading (Bold Serif Editorial) -->
-            <h1 class="font-serif text-4xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.08] mb-6 text-balance">
+            <h1 class="font-serif text-3xl sm:text-5xl md:text-6xl xl:text-7xl font-bold tracking-tight text-white leading-[1.12] sm:leading-[1.08] mb-4 sm:mb-6 text-balance">
               {{ currentSlide().title }}
             </h1>
 
             <!-- Subheading -->
-            <p class="text-base sm:text-lg md:text-xl text-[#E9DFD2]/90 font-normal leading-relaxed max-w-xl mb-8">
+            <p class="text-sm sm:text-lg md:text-xl text-[#E9DFD2]/90 font-normal leading-relaxed max-w-xl mb-6 sm:mb-8">
               {{ currentSlide().subtitle }}
             </p>
 
             <!-- Actions Row -->
-            <div class="flex flex-wrap items-center gap-4 sm:gap-6">
+            <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-2.5 sm:gap-6">
               <button
                 type="button"
                 (click)="scrollToShop()"
-                class="px-8 py-4 bg-[#F7F3ED] hover:bg-[#E9DFD2] text-[#241B14] font-semibold text-sm sm:text-base tracking-wide rounded-full transition-all duration-200 transform hover:-translate-y-0.5 shadow-md flex items-center gap-2 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+                class="w-full sm:w-auto px-7 py-3.5 sm:py-4 bg-[#F7F3ED] hover:bg-[#E9DFD2] text-[#241B14] font-semibold text-xs sm:text-base tracking-wider rounded-full transition-all duration-200 transform hover:-translate-y-0.5 shadow-md flex items-center justify-center gap-2 group cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
               >
                 <span>SHOP NOW</span>
-                <mat-icon class="text-lg group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
+                <mat-icon class="text-base sm:text-lg group-hover:translate-x-1 transition-transform">arrow_forward</mat-icon>
               </button>
 
               <button
                 type="button"
                 (click)="store.openBrandStory()"
-                class="px-6 py-4 text-[#F7F3ED] hover:text-white font-medium text-sm tracking-wide transition-colors flex items-center gap-2 group cursor-pointer"
+                class="w-full sm:w-auto px-5 py-2.5 sm:py-4 text-[#F7F3ED] hover:text-white font-medium text-xs sm:text-sm tracking-wide transition-colors flex items-center justify-center gap-1.5 sm:gap-2 group cursor-pointer"
               >
                 <span>Discover Craft</span>
-                <mat-icon class="text-base text-[#E9DFD2]/70 group-hover:text-white transition-colors">east</mat-icon>
+                <mat-icon class="text-sm sm:text-base text-[#E9DFD2]/70 group-hover:text-white transition-colors">east</mat-icon>
               </button>
             </div>
 
             <!-- Trust Marks -->
-            <div class="mt-10 pt-6 border-t border-white/10 flex flex-wrap items-center gap-6 sm:gap-8 text-xs sm:text-sm text-[#E9DFD2]/70 font-medium">
-              <div class="flex items-center gap-2">
+            <div class="mt-8 sm:mt-10 pt-5 sm:pt-6 border-t border-white/10 grid grid-cols-3 gap-2 sm:flex sm:flex-wrap sm:gap-8 text-[10px] sm:text-sm text-[#E9DFD2]/80 font-medium text-center sm:text-left">
+              <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2">
                 <mat-icon class="text-[#E9DFD2] text-sm sm:text-base">verified</mat-icon>
-                <span>Handcrafted Materials</span>
+                <span>Handcrafted</span>
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2">
                 <mat-icon class="text-[#E9DFD2] text-sm sm:text-base">autorenew</mat-icon>
-                <span>Free 30-Day Returns</span>
+                <span>30-Day Returns</span>
               </div>
-              <div class="flex items-center gap-2">
+              <div class="flex flex-col sm:flex-row items-center sm:items-center gap-1 sm:gap-2">
                 <mat-icon class="text-[#E9DFD2] text-sm sm:text-base">eco</mat-icon>
                 <span>Carbon Neutral</span>
               </div>
@@ -106,15 +106,15 @@ interface HeroSlide {
                 />
                 
                 <!-- Floating Spec Overlay Pill -->
-                <div class="absolute bottom-4 left-4 right-4 bg-[#241B14]/85 backdrop-blur-md border border-white/10 rounded-xl p-3.5 flex items-center justify-between text-xs text-white">
-                  <div>
-                    <p class="font-semibold text-sm">{{ currentSlide().badge }}</p>
-                    <p class="text-[#E9DFD2]/70 text-[11px]">Italian Suede · CloudForm™ Sole</p>
+                <div class="absolute bottom-3 left-3 right-3 sm:bottom-4 sm:left-4 sm:right-4 bg-[#241B14]/85 backdrop-blur-md border border-white/10 rounded-xl p-2.5 sm:p-3.5 flex items-center justify-between text-xs text-white">
+                  <div class="min-w-0 pr-2">
+                    <p class="font-semibold text-xs sm:text-sm truncate">{{ currentSlide().badge }}</p>
+                    <p class="text-[#E9DFD2]/70 text-[10px] sm:text-[11px] truncate">Italian Suede · CloudForm™ Sole</p>
                   </div>
                   <button
                     type="button"
                     (click)="store.setCategory(currentSlide().category)"
-                    class="bg-[#806345] hover:bg-[#A3805D] text-white px-3 py-1.5 rounded-lg text-xs font-medium transition-colors"
+                    class="bg-[#806345] hover:bg-[#A3805D] text-white px-2.5 sm:px-3 py-1 sm:py-1.5 rounded-lg text-[11px] sm:text-xs font-medium transition-colors shrink-0 cursor-pointer"
                   >
                     View Pair
                   </button>
@@ -126,52 +126,52 @@ interface HeroSlide {
         </div>
 
         <!-- Bottom Slider Controls & Pagination Bar -->
-        <div class="relative z-10 px-6 sm:px-10 lg:px-16 py-4 bg-[#382B1E]/60 backdrop-blur-xs border-t border-white/10 flex items-center justify-between">
+        <div class="relative z-10 px-4 sm:px-10 lg:px-16 py-3 sm:py-4 bg-[#382B1E]/60 backdrop-blur-xs border-t border-white/10 flex items-center justify-between">
           <!-- Slide Counter -->
-          <div class="flex items-center gap-2 font-mono text-xs sm:text-sm tracking-wider text-[#E9DFD2]">
-            <span class="font-bold text-white text-base sm:text-lg">0{{ activeSlideIndex() + 1 }}</span>
+          <div class="flex items-center gap-1.5 sm:gap-2 font-mono text-xs sm:text-sm tracking-wider text-[#E9DFD2]">
+            <span class="font-bold text-white text-sm sm:text-lg">0{{ activeSlideIndex() + 1 }}</span>
             <span class="opacity-40">/</span>
             <span class="opacity-70">0{{ slides.length }}</span>
-            <span class="ml-2 sm:ml-3 inline-block text-xs uppercase tracking-widest text-[#E9DFD2]/60">
+            <span class="ml-2 sm:ml-3 inline-block text-[10px] sm:text-xs uppercase tracking-widest text-[#E9DFD2]/60 truncate max-w-[120px] sm:max-w-none">
               — {{ currentSlide().category }}
             </span>
           </div>
 
           <!-- Slide Dots & Arrows -->
-          <div class="flex items-center gap-3 sm:gap-4">
+          <div class="flex items-center gap-2 sm:gap-4">
             <!-- Navigation dots -->
-            <div class="flex items-center gap-1.5">
+            <div class="flex items-center gap-1 sm:gap-1.5">
               @for (slide of slides; track $index) {
                 <button
                   type="button"
                   (click)="setSlide($index)"
                   [attr.aria-label]="'Go to slide ' + ($index + 1)"
-                  class="h-2 rounded-full transition-all duration-300"
-                  [class]="$index === activeSlideIndex() ? 'w-8 bg-[#E9DFD2]' : 'w-2 bg-white/30 hover:bg-white/50'"
+                  class="h-1.5 sm:h-2 rounded-full transition-all duration-300"
+                  [class]="$index === activeSlideIndex() ? 'w-5 sm:w-8 bg-[#E9DFD2]' : 'w-1.5 sm:w-2 bg-white/30 hover:bg-white/50'"
                 ></button>
               }
             </div>
 
-            <div class="h-4 w-px bg-white/20 mx-1"></div>
+            <div class="h-3.5 w-px bg-white/20 mx-0.5 sm:mx-1"></div>
 
             <!-- Previous Slide Button -->
             <button
               type="button"
               (click)="prevSlide()"
-              class="w-8 h-8 rounded-full border border-white/20 hover:border-white hover:bg-white/10 flex items-center justify-center text-white transition-colors"
+              class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/20 hover:border-white hover:bg-white/10 flex items-center justify-center text-white transition-colors"
               aria-label="Previous slide"
             >
-              <mat-icon class="text-sm">chevron_left</mat-icon>
+              <mat-icon class="text-xs sm:text-sm">chevron_left</mat-icon>
             </button>
 
             <!-- Next Slide Button -->
             <button
               type="button"
               (click)="nextSlide()"
-              class="w-8 h-8 rounded-full border border-white/20 hover:border-white hover:bg-white/10 flex items-center justify-center text-white transition-colors"
+              class="w-7 h-7 sm:w-8 sm:h-8 rounded-full border border-white/20 hover:border-white hover:bg-white/10 flex items-center justify-center text-white transition-colors"
               aria-label="Next slide"
             >
-              <mat-icon class="text-sm">chevron_right</mat-icon>
+              <mat-icon class="text-xs sm:text-sm">chevron_right</mat-icon>
             </button>
           </div>
         </div>

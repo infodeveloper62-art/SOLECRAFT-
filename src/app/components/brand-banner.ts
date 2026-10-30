@@ -9,7 +9,7 @@ import { StoreService } from '../services/store';
   template: `
     <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 sm:py-12">
       <!-- Wide Premium Promotional Banner with Warm Brown / Rich Tone Palette -->
-      <div class="relative overflow-hidden rounded-3xl bg-[#241B14] text-white shadow-xl min-h-[340px] sm:min-h-[380px] flex items-center justify-between p-8 sm:p-12 lg:p-16">
+      <div class="relative overflow-hidden rounded-3xl bg-[#241B14] text-white shadow-xl min-h-[320px] sm:min-h-[380px] flex items-center justify-between p-6 sm:p-12 lg:p-16">
         
         <!-- Background Imagery Scrim -->
         <img
@@ -26,18 +26,18 @@ import { StoreService } from '../services/store';
             Limited Production Series
           </span>
           
-          <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-4 text-balance">
+          <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-white mb-3 sm:mb-4 text-balance">
             FIND YOUR NEXT FAVORITE PAIR
           </h2>
 
-          <p class="text-base sm:text-lg text-[#E9DFD2]/90 font-normal mb-8 leading-relaxed">
+          <p class="text-xs sm:text-lg text-[#E9DFD2]/90 font-normal mb-6 sm:mb-8 leading-relaxed">
             Designed to move with you. Crafted with cloud-soft cushioning and architectural elegance for all walks of life.
           </p>
 
           <button
             type="button"
             (click)="scrollToCollection()"
-            class="px-8 py-4 bg-[#E9DFD2] hover:bg-white text-[#241B14] font-semibold text-xs sm:text-sm tracking-widest uppercase rounded-full transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
+            class="w-full sm:w-auto justify-center px-8 py-3.5 sm:py-4 bg-[#E9DFD2] hover:bg-white text-[#241B14] font-semibold text-xs sm:text-sm tracking-widest uppercase rounded-full transition-all duration-200 transform hover:-translate-y-0.5 shadow-lg flex items-center gap-2 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-white"
           >
             <span>EXPLORE COLLECTION</span>
             <mat-icon class="text-base">arrow_forward</mat-icon>

@@ -29,14 +29,14 @@ import { StoreService } from '../services/store';
         ></button>
 
         <!-- Checkout Dialog -->
-        <div class="flex min-h-full items-center justify-center p-3 sm:p-6 text-center">
+        <div class="flex min-h-full items-center justify-center p-2 sm:p-6 text-center">
           <div
-            class="relative w-full max-w-5xl transform overflow-hidden rounded-3xl bg-[#F7F3ED] text-left align-middle shadow-2xl transition-all border border-[#E5DACF]"
+            class="relative w-full max-w-5xl transform overflow-hidden rounded-2xl sm:rounded-3xl bg-[#F7F3ED] text-left align-middle shadow-2xl transition-all border border-[#E5DACF]"
           >
             <!-- Checkout Header -->
-            <div class="p-6 bg-white border-b border-[#E5DACF] flex items-center justify-between">
-              <div class="flex items-center gap-3">
-                <span class="font-serif text-2xl font-bold tracking-tight text-[#241B14]">
+            <div class="p-4 sm:p-6 bg-white border-b border-[#E5DACF] flex items-center justify-between">
+              <div class="flex items-center gap-2 sm:gap-3">
+                <span class="font-serif text-xl sm:text-2xl font-bold tracking-tight text-[#241B14]">
                   SOLECRAFT
                 </span>
                 <span class="text-xs text-[#806345]/50">|</span>
@@ -59,7 +59,7 @@ import { StoreService } from '../services/store';
             <div class="grid grid-cols-1 lg:grid-cols-12">
               
               <!-- Left: Shipping & Payment Form (lg:col-span-7) -->
-              <div class="lg:col-span-7 p-6 sm:p-8 bg-[#F7F3ED] max-h-[80vh] overflow-y-auto">
+              <div class="lg:col-span-7 p-4 sm:p-8 bg-[#F7F3ED] max-h-[80vh] overflow-y-auto">
                 <form [formGroup]="checkoutForm" (ngSubmit)="onSubmitOrder()">
                   
                   <!-- Section 1: Customer & Delivery Details -->
@@ -313,7 +313,7 @@ import { StoreService } from '../services/store';
               </div>
 
               <!-- Right: Order Summary (lg:col-span-5) -->
-              <div class="lg:col-span-5 p-6 sm:p-8 bg-white border-t lg:border-t-0 lg:border-l border-[#E5DACF] flex flex-col justify-between max-h-[80vh] overflow-y-auto">
+              <div class="lg:col-span-5 p-4 sm:p-8 bg-white border-t lg:border-t-0 lg:border-l border-[#E5DACF] flex flex-col justify-between max-h-[80vh] overflow-y-auto">
                 <div>
                   <h3 class="font-serif text-lg font-bold text-[#241B14] mb-4">
                     Order Summary ({{ store.cartCount() }} items)

@@ -31,12 +31,12 @@ import { StoreService } from '../services/store';
       <div class="mb-10 flex flex-col lg:flex-row lg:items-center justify-between gap-6 pb-6 border-b border-[#E5DACF]">
         
         <!-- Category Segmented Filter Tabs (Single line with smooth horizontal scrolling on mobile) -->
-        <div class="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0 scrollbar-none max-w-full">
+        <div class="flex items-center gap-1.5 overflow-x-auto pb-2 lg:pb-0 scrollbar-none max-w-full -mx-3 px-3 sm:mx-0 sm:px-0">
           @for (cat of categories; track cat) {
             <button
               type="button"
               (click)="store.setCategory(cat)"
-              class="whitespace-nowrap px-4 py-2 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928]"
+              class="whitespace-nowrap px-3 sm:px-4 py-1.5 sm:py-2 text-xs sm:text-sm font-medium rounded-full transition-all duration-200 cursor-pointer focus:outline-none focus-visible:ring-2 focus-visible:ring-[#4B3928]"
               [class]="
                 store.activeCategory() === cat
                   ? 'bg-[#4B3928] text-white shadow-sm'
@@ -197,7 +197,7 @@ import { StoreService } from '../services/store';
                 </button>
 
                 <!-- Short Product Description -->
-                <p class="text-[11px] sm:text-sm text-[#4B3928]/80 line-clamp-2 leading-relaxed mb-2 sm:mb-3">
+                <p class="text-[11px] sm:text-sm text-[#4B3928]/80 line-clamp-1 sm:line-clamp-2 leading-relaxed mb-2 sm:mb-3">
                   {{ product.shortDescription }}
                 </p>
 

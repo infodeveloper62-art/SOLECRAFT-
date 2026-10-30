@@ -18,11 +18,11 @@ import { StoreService } from '../services/store';
         ></button>
 
         <!-- Slide-Over Drawer Container -->
-        <div class="fixed inset-y-0 right-0 max-w-full flex pl-10">
+        <div class="fixed inset-y-0 right-0 max-w-full flex pl-0 sm:pl-10">
           <div class="w-screen max-w-md bg-[#F7F3ED] shadow-2xl flex flex-col justify-between border-l border-[#E5DACF]">
             
             <!-- Drawer Header -->
-            <div class="p-6 border-b border-[#E5DACF] flex items-center justify-between bg-white">
+            <div class="p-4 sm:p-6 border-b border-[#E5DACF] flex items-center justify-between bg-white">
               <div class="flex items-center gap-2">
                 <mat-icon class="text-[#4B3928]">shopping_bag</mat-icon>
                 <h2 class="font-serif text-xl font-bold text-[#241B14]">
@@ -43,7 +43,7 @@ import { StoreService } from '../services/store';
             </div>
 
             <!-- Free Shipping Progress Bar Banner -->
-            <div class="bg-[#E9DFD2]/60 px-6 py-3 border-b border-[#E5DACF]">
+            <div class="bg-[#E9DFD2]/60 px-4 sm:px-6 py-2.5 sm:py-3 border-b border-[#E5DACF]">
               @if (store.cartSubtotal() >= store.freeShippingThreshold) {
                 <div class="flex items-center gap-2 text-xs font-semibold text-emerald-800">
                   <mat-icon class="text-sm">check_circle</mat-icon>
@@ -68,7 +68,7 @@ import { StoreService } from '../services/store';
             </div>
 
             <!-- Cart Items List (Scrollable) -->
-            <div class="flex-1 overflow-y-auto p-6 divide-y divide-[#E5DACF]/70">
+            <div class="flex-1 overflow-y-auto p-4 sm:p-6 divide-y divide-[#E5DACF]/70">
               @if (store.cart().length > 0) {
                 @for (item of store.cart(); track item.id) {
                   <div class="py-4 first:pt-0 last:pb-0 flex gap-4">
@@ -160,7 +160,7 @@ import { StoreService } from '../services/store';
 
             <!-- Footer: Summary & Checkout Buttons -->
             @if (store.cart().length > 0) {
-              <div class="p-6 bg-white border-t border-[#E5DACF] flex flex-col gap-4">
+              <div class="p-4 sm:p-6 bg-white border-t border-[#E5DACF] flex flex-col gap-3 sm:gap-4">
                 <!-- Breakdown -->
                 <div class="space-y-2 text-xs sm:text-sm text-[#4B3928]">
                   <div class="flex justify-between">

@@ -13,6 +13,7 @@ import { ProductModalComponent } from './components/product-modal';
 import { WishlistDrawerComponent } from './components/wishlist-drawer';
 import { ToastComponent } from './components/toast';
 import { InfoModalsComponent } from './components/info-modals';
+import { MobileNavComponent } from './components/mobile-nav';
 
 @Component({
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -32,6 +33,7 @@ import { InfoModalsComponent } from './components/info-modals';
     WishlistDrawerComponent,
     ToastComponent,
     InfoModalsComponent,
+    MobileNavComponent,
   ],
   templateUrl: './app.html',
   styleUrl: './app.css',

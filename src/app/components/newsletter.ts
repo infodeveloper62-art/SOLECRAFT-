@@ -8,8 +8,8 @@ import { StoreService } from '../services/store';
   changeDetection: ChangeDetectionStrategy.OnPush,
   imports: [ReactiveFormsModule, MatIconModule],
   template: `
-    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16">
-      <div class="relative overflow-hidden rounded-3xl bg-[#E9DFD2] p-8 sm:p-12 lg:p-16 border border-[#E5DACF] text-center max-w-4xl mx-auto">
+    <section class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 sm:py-16">
+      <div class="relative overflow-hidden rounded-3xl bg-[#E9DFD2] p-6 sm:p-12 lg:p-16 border border-[#E5DACF] text-center max-w-4xl mx-auto">
         
         <!-- Subtle Corner Emblem -->
         <div class="w-12 h-12 rounded-full bg-[#4B3928]/10 mx-auto flex items-center justify-center text-[#4B3928] mb-4">
@@ -20,11 +20,11 @@ import { StoreService } from '../services/store';
           Private Client Dispatch
         </span>
 
-        <h2 class="font-serif text-3xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#241B14] mb-3">
+        <h2 class="font-serif text-2xl sm:text-4xl lg:text-5xl font-bold tracking-tight text-[#241B14] mb-3">
           STAY IN THE LOOP
         </h2>
 
-        <p class="text-sm sm:text-base text-[#4B3928] max-w-lg mx-auto mb-8 leading-relaxed">
+        <p class="text-xs sm:text-base text-[#4B3928] max-w-lg mx-auto mb-6 sm:mb-8 leading-relaxed">
           Get early access to new drops, exclusive offers and sneaker news.
         </p>
 
@@ -38,7 +38,7 @@ import { StoreService } from '../services/store';
             </p>
           </div>
         } @else {
-          <form (submit)="onSubscribe($event)" class="max-w-md mx-auto flex flex-row gap-2 sm:gap-2.5">
+          <form (submit)="onSubscribe($event)" class="max-w-md mx-auto flex flex-col sm:flex-row gap-2.5">
             <div class="relative flex-1">
               <input
                 type="email"
@@ -54,7 +54,7 @@ import { StoreService } from '../services/store';
             <button
               type="submit"
               [disabled]="emailControl.invalid && emailControl.touched"
-              class="px-8 py-3.5 bg-[#4B3928] hover:bg-[#382B1E] disabled:opacity-60 text-white font-semibold text-xs sm:text-sm tracking-widest uppercase rounded-xl transition-all shadow-sm hover:shadow-md cursor-pointer shrink-0"
+              class="w-full sm:w-auto px-8 py-3.5 bg-[#4B3928] hover:bg-[#382B1E] disabled:opacity-60 text-white font-semibold text-xs sm:text-sm tracking-widest uppercase rounded-xl transition-all shadow-sm hover:shadow-md cursor-pointer shrink-0 justify-center flex items-center"
             >
               SUBSCRIBE
             </button>

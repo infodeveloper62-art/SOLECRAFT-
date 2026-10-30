@@ -13,15 +13,15 @@ import { StoreService } from '../services/store';
         <!-- 2-Column Mobile & Tablet, 4-Column Desktop Grid -->
         <div class="grid grid-cols-2 lg:grid-cols-4 gap-8 sm:gap-12 pb-10 sm:pb-14 border-b border-white/10">
           
-          <!-- Column 1: Brand & Ethos -->
-          <div class="flex flex-col">
-            <span class="font-serif text-3xl font-bold tracking-tight text-white mb-2">
+          <!-- Column 1: Brand & Ethos (Full width top on mobile, 1 col on desktop) -->
+          <div class="col-span-2 lg:col-span-1 flex flex-col">
+            <span class="font-serif text-2xl sm:text-3xl font-bold tracking-tight text-white mb-2">
               SOLECRAFT
             </span>
-            <p class="font-serif italic text-sm text-[#E9DFD2] mb-4">
+            <p class="font-serif italic text-xs sm:text-sm text-[#E9DFD2] mb-3 sm:mb-4">
               "Step into your style."
             </p>
-            <p class="text-xs text-[#E9DFD2]/70 leading-relaxed max-w-xs mb-6">
+            <p class="text-xs text-[#E9DFD2]/70 leading-relaxed max-w-sm mb-5 sm:mb-6">
               Modern footwear sculpted for everyday movement. Sourced with architectural precision, premium leathers, and dual-density comfort.
             </p>
             <div class="flex items-center gap-2 text-xs text-[#E9DFD2]/80">
@@ -31,7 +31,7 @@ import { StoreService } from '../services/store';
           </div>
 
           <!-- Column 2: SHOP -->
-          <div>
+          <div class="col-span-1">
             <h4 class="font-serif text-sm font-bold tracking-widest uppercase text-white mb-4">
               SHOP
             </h4>
@@ -85,7 +85,7 @@ import { StoreService } from '../services/store';
           </div>
 
           <!-- Column 3: HELP -->
-          <div>
+          <div class="col-span-1">
             <h4 class="font-serif text-sm font-bold tracking-widest uppercase text-white mb-4">
               HELP
             </h4>
@@ -139,7 +139,7 @@ import { StoreService } from '../services/store';
           </div>
 
           <!-- Column 4: FOLLOW US -->
-          <div>
+          <div class="col-span-2 lg:col-span-1">
             <h4 class="font-serif text-sm font-bold tracking-widest uppercase text-white mb-4">
               FOLLOW US
             </h4>
@@ -204,9 +204,9 @@ import { StoreService } from '../services/store';
         </div>
 
         <!-- Bottom Row: Copyright & Disclaimers -->
-        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#E9DFD2]/60 gap-4">
+        <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-[#E9DFD2]/60 gap-4 text-center sm:text-left">
           <p>© 2026 SOLECRAFT. All Rights Reserved.</p>
-          <div class="flex items-center gap-6">
+          <div class="flex flex-wrap items-center justify-center sm:justify-start gap-3 sm:gap-6">
             <button
               type="button"
               (click)="openSupport('Privacy Policy: Solecraft protects your data with strict 256-bit encryption and never sells client information.')"
